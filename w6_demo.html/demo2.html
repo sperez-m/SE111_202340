@@ -32,15 +32,28 @@
          {
           return dining.toLowerCase()
          }
-         
-      }
-      else if(_pref.toLowerCase() == `no`)
-      {
-       alert (`UH OH ! Inavlid entry\nplease reload and re-read directions`)
-      }
+         else if (dining.toLowerCase() === `out`)
+         {
+            return dinning.toLowerCase()
+         }
+        else
+        {
+          return `bad`
+         }  
+         }
+         else if(_pref.toLowerCase() == `no`)
+        {
+            alert(`you have poor taste.`)
+            return 0
+        }
+        else
+        {
+        alert (`UH OH ! Inavlid entry\nplease reload and re-read directions`)
+        return `bad`
+        }
     }
 
-    
+
     var decision = checkdining(pref)
     if (decision == 0)
     {
