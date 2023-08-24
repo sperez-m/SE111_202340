@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SP">
+    <meta name="description" content="w6 demo second - intro to JS">
+    <title>w6 | demo #2</title>
+</head>
+<body>
+    <h1>week 6 - secondary Javascript demo</h1>
+    <h3><i>conditions & functions</i></h3>
+
+    <!---in document js---->
+    <script>
+     //prompt user for yes or no
+     var pref = prompt(`welcome to good burger, home of the good
+     burger, may I take your order? \ntype "yes" or "no"`)
+
+     //fuctions below checks prompt/input supplied by user and then returns a dining preference type  
+
+    //fuctions 
+    function checkdining(_pref)
+    {
+      //conditions or conditional statements are held inside of ()
+      //== is exactly equal in both value and data type
+      if(_pref.toLowerCase() == `yes`){
+
+         var dining = prompt(`would you like to dine in or take
+         out\ntype "in" or "out"`)
+         if (dining.toLowerCase() === `in`)
+         {
+          return dining.toLowerCase()
+         }
+         
+      }
+      else if(_pref.toLowerCase() == `no`)
+      {
+       alert (`UH OH ! Inavlid entry\nplease reload and re-read directions`)
+      }
+    }
+
+    
+    var decision = checkdining(pref)
+    if (decision == 0)
+    {
+        alert(`okey, goodbye.`)
+    }
+    else if (decision == `bad`)
+    {
+        alert(`please reload`)
+    }
+    else 
+    {
+        alert(`please tell me your order...`)
+    }
+
+    </script>
+</body>
+</html>

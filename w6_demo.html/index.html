@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SP">
+    <meta name="description" content="w6 demo - intro to JS">
+    <title>week 6 intro demo | Javascript</h1></title>
+    <style>
+        body{
+            background-color:lightgray;
+        }
+           
+        
+    </style>
+</head>
+<body>
+    <!--we should have some sort html in the file/body for base content-->
+    <h1>week 6 intro demo | Javascript</h1>
+    <!--in document javascript-lives within the html file itself; should always be -->
+    <script>
+        //in here, we write js
+        console.log(`the sum is: ${sum}`)
+        //creating variable --keyword 'var'
+        var num1 = 10
+        var num2 = 7
+        
+        var sum = num1 + num2 
+
+        //alert() allows for a pop-up in the browser
+
+         alert(`hello world`)
+         // for development - only accessible in console via dev tools 
+         console.log(`hi universe`)
+         
+          // `` denotes literal string -->
+          //${VARNAME} inside of `` to display stored value mixed w/ string 
+          console.log(`the sum is: \n${sum}`)
+
+          //prompt() asks user to under
+          var fname = prompt(`Enter your name: `)
+
+          alert(`Hi there ${fname}`)
+          var age = Number(prompt(`enter your age: `))
+          var dogyears = age * 7
+          console.log(`in dog years your are: ${dogyears} yo`)
+          console.log(`your age is: ${age.tofixed(2)}`)
+         
+    </script>
+    
+</body>
+</html>
