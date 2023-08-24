@@ -12,34 +12,50 @@
     <h3><i>conditions & functions</i></h3>
 
     <!---in document js---->
+
     <script>
-     //prompt user for yes or no
+     // in here we write in js
+     //prompt user for yes or no response
+
      var pref = prompt(`welcome to good burger, home of the good
      burger, may I take your order? \ntype "yes" or "no"`)
 
      //fuctions below checks prompt/input supplied by user and then returns a dining preference type  
+    //fuctions definition below
 
-    //fuctions 
     function checkdining(_pref)
     {
       //conditions or conditional statements are held inside of ()
+
       //== is exactly equal in both value and data type
-      if(_pref.toLowerCase() == `yes`){
+
+      if(_pref.toLowerCase() == `yes`)
+
+      {
+            // want to order
 
          var dining = prompt(`would you like to dine in or take
          out\ntype "in" or "out"`)
+
          if (dining.toLowerCase() === `in`)
+           //dining in
          {
           return dining.toLowerCase()
          }
+
          else if (dining.toLowerCase() === `out`)
          {
+           
+            //take out
             return dinning.toLowerCase()
          }
+
         else
         {
+            //invalid entry
           return `bad`
          }  
+         
          }
          else if(_pref.toLowerCase() == `no`)
         {
