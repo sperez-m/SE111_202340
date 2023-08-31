@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(`beginning value of health: ${health}`)
+        function modifyhealth(_amount){
+            var health = 100
+            health +=_amount
+        }
+        modifyhealth(15)
+        console.log(`after modifyhealth(15): ${h}`)
+        h = modifyhealth(-50)
+        console.log(`after modifyhealth`)
+    </script>
+</body>
+</html>
