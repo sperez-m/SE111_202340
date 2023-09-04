@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Steven Perez">
+    <meta name="description" content="Week 7 Assignment practicing Javascript & HTML">
+    <title>Week 7 | Pay Form Calculator Assignment</title>
+</head>
+<body>
+
+    <h1>Pay Calculator Form</h1>
+
+    <form>
+        <label for="first">First Name:</label>
+        <input type="text" id="first">
+        <br>
+
+        <label for="last">Last Name:</label>
+        <input type="text" id="last">
+        <br>
+
+        <label for="hours">Hours Worked:</label>
+        <input type="text" id="hours">
+        <br>
+
+        <label for="rate">Hourly Rate:</label>
+        <input type="text" id="rate">
+        <br>
+        <br>
+
+        <input type="button" id="enter-button" value="Enter">
+        <br>
+        <br>
+
+        <div id="final" style="border:1px solid rgb(87, 86, 86); padding:15px; background-color:rgb(168, 168, 168);">
+            <h3>Employee Info:</h3>
+            <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once the form is filled.</i></p>
+            <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
+        </div>
+        <br>
+        <br>
+
+        <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
+        <input type="button" id="submit-button" value="SUBMIT">
+    </form>
+
+    <script>
+        // Add an event listener to the "Enter" button
+        document.querySelector('#enter-button').addEventListener('click', alertName);
+
+        // Add an event listener to the "SUBMIT" button
+        document.querySelector('#submit-button').addEventListener('click', submitNow);
+
+        function alertName(e) {
+            var fname = document.querySelector('#first').value;
+            var lname = document.querySelector('#last').value;
+            var hours = parseFloat(document.querySelector('#hours').value);
+            var rate = parseFloat(document.querySelector('#rate').value);
+
+            var full = fname + ' ' + lname;
+            var gross = hours * rate;
+            var taxAmount = 0.2 * gross;
+            var net = gross - taxAmount;
+
+            var finalMessage = `${full}<br>HOURS: ${hours}<br>RATE: $${rate.toFixed(2)}`;
+            var info = document.querySelector('#info');
+            info.innerHTML = finalMessage;
+
+            var checkMessage = `GROSS PAY: $${gross.toFixed(2)}<br>TAX AMOUNT: $${taxAmount.toFixed(2)}<br>NET PAY: $${net.toFixed(2)}`;
+            var check = document.querySelector('#check');
+            check.innerHTML = checkMessage;
+        }
+
+        function submitNow(e) {
+            var fname = document.querySelector('#first').value;
+            var lname = document.querySelector('#last').value;
+            var hours = parseFloat(document.querySelector('#hours').value);
+            var rate = parseFloat(document.querySelector('#rate').value);
+
+            var full = fname + ' ' + lname;
+            var gross = hours * rate;
+            var taxAmount = 0.2 * gross;
+            var net = gross - taxAmount;
+
+            alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>
