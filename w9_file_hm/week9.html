@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name ="author" content="Steven Perez">
+<meta name ="w9 file edition" content="W9 HM">
+<title>Week 9 Files</title>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W9 | DOM HM</title>
+    <style type="text/css">
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<h1>W9 | DOM Practice </h1>
+<body style="background-color: lightgreen;">
+    <div id="container"></div>
+
+    <script type="text/javascript">
+        // Use this Array of objects to complete the assignment.
+        var people = [
+            { first: "Jason", last: "Vorhees", credit: "Friday the 13th" },
+            { first: "Freddy", last: "Krueger", credit: "A Nightmare on Elm Street" },
+            { first: "Roger", last: "Rabbit", credit: "Who Framed Roger Rabbit" },
+            { first: "Kevin", last: "McCallister", credit: "Home Alone" },
+            { first: "Godzilla", last: "King of The Monsters", credit: "Godzilla" },
+            { first: "Buzz", last: "Lightyear", credit: "Toy Story" }
+        ];
+
+        // Get the container div element
+        var container = document.getElementById("container");
+
+        // Loop through the array of objects
+        for (var i = 0; i < people.length; i++) {
+            // Create a new div element
+            var div = document.createElement("div");
+
+            // Add the class ".border" using classList
+            div.classList.add("border");
+
+            // Set the id attribute using setAttribute() method
+            div.setAttribute("id", "person" + (i + 1));
+
+            // Create a <p> tag for each item
+            var firstName = document.createElement("p");
+            firstName.textContent = "First Name: " + people[i].first;
+
+            var lastName = document.createElement("p");
+            lastName.textContent = "Last Name: " + people[i].last;
+
+            var credit = document.createElement("p");
+            credit.textContent = "Credit: " + people[i].credit;
+
+            // Append the <p> tags to the div
+            div.appendChild(firstName);
+            div.appendChild(lastName);
+            div.appendChild(credit);
+
+            // Append the div to the container
+            container.appendChild(div);
+        }
+    </script>
+</body>
+
+</html>
+
+
+
